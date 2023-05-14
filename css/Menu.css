@@ -1,27 +1,24 @@
-
-
-body{
-    background-color: rgb(20, 20, 20);
-    height: 100vh;
+header {
+    position: relative;
+    z-index: 2;
 }
 
 #menu {
-    height: 100vh;
-    display: flex;
-    align-items: center;
+    margin-top: 3rem;
+    text-align: start;
+    height:85vh;
 }
 
 .menu-item {
+    margin-left: 3rem;
     color: white;
-    font-size: 4rem;
+    font-size: 3rem;
     display: block;
     text-decoration: none;
-    padding: 0.5rem;
     transition: opacity 400ms ease;
 }
 
 #menu-items {
-    margin-left: 5rem;
     position: relative;
     z-index: 2;
 }
@@ -61,10 +58,10 @@ body{
 }
 
 a{
-    font-weight: 500;
+    font-weight: 200;
     text-decoration: none;
     color: #fff;
-    font-size: 2rem;
+    font-size: 1rem;
 }
 
 a:hover{

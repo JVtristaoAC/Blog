@@ -1,93 +1,197 @@
+#parallax-background-pattern {
+    height: 100vh;
+    width: 100vw;
 
-    /* display: flex;
-    justify-content: center;
-    align-items: center; */
-body{
-        width: 100%;
-        height: 100%;
+    background-image: radial-gradient(
+        rgba(30, 30, 30, 0.5) 9%,
+        transparent 9%
+    );
 
-    }
-header 
+    background-position: 0% 0%;
+    background-size: 3rem 3rem;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: 1;
+
+    transition: opacity 800ms ease,
+        background-size 800ms ease;
+}
+
+
+.parallax-wrapper 
 {
-    height: 10vh;
-    background-color: rgb(20, 20, 20);
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-
-a{
-    padding: 0 2rem;
-}
-
-.parallax-wrapper{
     height: 90vh;
     overflow-x: hidden;
-    overflow-y: auto;
+    overflow-y: scroll;
+    scroll-snap-type: y proximity;
+    stroke-linecap: butt;
     perspective: 300px;
 }
 
-.parallax-wrapper .intro-screen {
+.parallax-wrapper .intro-screen 
+{
+    background-color: #131219;
+    scroll-snap-align: start;
     height: 90vh;
-    background-color: tomato;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items:center;
 }
 
-.parallax-wrapper .outro-screen {
-    height: 90vh;
-    background-color: teal;
+.parallax-wrapper .outro-screen
+{
+    scroll-snap-align: start;
+    height: 20vh;
+    background-color: #671da0;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items:center;
 }
 
-.parallax-wrapper .parallax-group {
+.parallax-wrapper .parallax-group 
+{
+    scroll-snap-align: start;
     position: relative;
     height: 90vh;
     transform-style: preserve-3d;
 }
 
-.parallax-wrapper .parallax-group .parallax-layer{
+.parallax-group .parallax-layer
+{
     position: absolute;
     inset: 0;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items:center;
 }
 
-.parallax-wrapper .parallax-group .base-layer{
-    /* scale calculation 1 + ((Z transform value * -1) / perspective) */
+.parallax-group .base-layer
+{
+    /* 1 = ((Z transform value * -1) /perspective */
     transform: translateZ(-300px) scale(2);
 }
 
-.parallax-wrapper .parallax-group .mid-layer{
-    /* scale calculation 1 + ((Z transform value * -1) / perspective) */
+.parallax-group .mid-layer
+{
+    /* 1 = ((Z transform value * -1) /perspective */
     transform: translateZ(0);
 }
 
-.parallax-wrapper .parallax-group .top-layer{
-    /* scale calculation 1 + ((Z transform value * -1) / perspective) */
-    transform: translateZ(210px) scale(0.3);
+.parallax-group .top-layer
+{
+    /* 1 = ((Z transform value * -1) /perspective */
+    transform: translateZ(200px) scale(0.3);
 }
 
-#intro{
-    z-index: 0;
+#intro 
+{
+ z-index: 0;
 }
 
-#group-1{
+#group-1 
+{
     z-index: -1;
 }
 
-#group-1 > .base-layer{
-    background-color: crimson;
+#group-1 > .base-layer
+{
+    background-color: #671da0;
+    justify-content: flex-start;
 }
 
-#group-2{}
+#group-1 > .mid-layer
+{
+    justify-content: flex-end;
 
-#group-2 > .mid-layer{
-    background-color: yellowgreen;
 }
 
-#outro{}
+#group-1 > .top-layer
+{
+    justify-content: flex-start;
+    margin-left: 1rem;
+    font-size: 2rem;
+    color: #131219;
+}
+
+#group-2 > .mid-layer 
+{
+   background-color: #131219;
+}
+
+.intro-screen img 
+{
+    border-radius: 0.5rem;
+    height: 50vh;
+    margin-left: 3rem;
+    transform: translate(0rem, 0%);
+    transition: 800ms;
+}
+
+.intro-screen img:hover 
+{
+    transform: translate(0rem, -5%);
+}
+
+label 
+{
+    width: 40vw;
+    height: 50vh;
+    text-align: start;
+}
+
+label h1
+{
+    color: #671da0;
+}
+
+.informations
+{
+    margin-left: 3rem;
+}
+
+.social-icons
+{
+    display: flex;
+}
+
+.social-icons .social-icon{
+    background-color: #671da0;
+    border-radius: 0.5rem;
+    height: 5vh;
+    padding: 0.5vh;
+    margin: 2rem 0.5rem;
+    transform: translate(0rem, 0%);
+    transition: 500ms;
+}
+
+.social-icon:hover
+{
+    transform: translate(0rem, -200%);
+    opacity: 0.5;
+}
+
+.work-items
+{
+    display: flex;
+}
+
+.work-items
+{
+
+}
+
+.work-item
+{
+    background-color: #131219;
+    height: 50vh;
+    width: 20vw;
+    margin: 1rem;
+    border-radius: 0.5rem;
+}
+
+.work-item img
+{
+    border-radius: 0.5rem;
+    width: 20vw;
+}

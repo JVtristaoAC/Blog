@@ -3,25 +3,103 @@
 @keyframes transitionIn {
     from{
         opacity: 0;
-        transform: perspective(-100deg);
+        transform: translate(10deg, 10deg)
     }
     to{
         opacity: 1;
-        transform: perspective(0);
-
+        transform: translate(0, 0);
     }
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
 }
 
 
 body {
+    background-color: #131219;
     animation: transitionIn 2s;
     font-family: 'Roboto', sans-serif;
     color: #fff;
-    font-size: 4em;
+    overflow: hidden;
+    width: 100vw;
 }
+
+header 
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    width: 3rem;
+    margin-left: 1rem;
+    transition: 800ms;
+}
+
+.logo:hover {
+    transform: scale(1.2, 1.2);
+}
+
+.element-style {
+    padding: 2rem;
+    font-size: 1rem;
+    text-decoration: none;
+    background-color: transparent;
+    border-color: transparent;
+}
+
+.icon{
+    transform: rotate(45deg);
+    opacity: 1;
+
+    position: absolute;
+    transition: 1s;
+    top: 1.5rem;
+    right: 2rem;
+    width: 2rem;
+    height: 2rem;
+    border: 0.1rem solid #fff;
+}
+
+.element-style:hover .icon {
+ transform: rotate(45deg) scale(1.5, 1.5);
+ opacity: 0.2;
+}
+
+.icon-inner{
+    transform: rotate(45deg);
+    background-color: transparent;
+
+    position: absolute;
+    transition: 1s;
+    top: 1.5rem;
+    right: 2rem;
+    width: 2rem;
+    height: 2rem;
+    border: 0.1rem solid #fff;
+}
+
+.element-style:hover .icon-inner {
+    transform: rotate(45deg) scale(0.15, 0.15);
+    opacity: 1;
+    background-color: #fff;
+}
+
+.label-header{
+    opacity: 1;
+    margin-right: 3rem;
+    transform: translate(0%, 0rem);
+    display: inline-block;
+    transition: 1s;
+    color: #fff;
+}
+
+.element-style:hover .label-header{
+    opacity: 0.2;
+    transform: translate(-50%, 0rem);
+}
+
