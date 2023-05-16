@@ -1,5 +1,6 @@
+
 #parallax-background-pattern {
-    height: 100vh;
+    height: 90vh;
     width: 100vw;
 
     background-image: radial-gradient(
@@ -18,9 +19,7 @@
         background-size 800ms ease;
 }
 
-
-.parallax-wrapper 
-{
+.parallax-wrapper {
     height: 90vh;
     overflow-x: hidden;
     overflow-y: scroll;
@@ -29,8 +28,7 @@
     perspective: 300px;
 }
 
-.parallax-wrapper .intro-screen 
-{
+.intro-screen {
     background-color: #131219;
     scroll-snap-align: start;
     height: 90vh;
@@ -39,8 +37,7 @@
     align-items:center;
 }
 
-.parallax-wrapper .outro-screen
-{
+.outro-screen{
     scroll-snap-align: start;
     height: 20vh;
     background-color: #671da0;
@@ -49,42 +46,48 @@
     align-items:center;
 }
 
-.parallax-wrapper .parallax-group 
-{
+.parallax-group{
     scroll-snap-align: start;
     position: relative;
     height: 90vh;
     transform-style: preserve-3d;
 }
 
-.parallax-group .parallax-layer
-{
+.parallax-layer{
     position: absolute;
     inset: 0;
-
+    padding: 5rem;
 }
 
-.parallax-group .base-layer
-{
-    /* 1 = ((Z transform value * -1) /perspective */
-    transform: translateZ(-300px) scale(2);
+.base-layer{
+    /* 1 - ((Z transform value * -1) /perspective */
+    transform: translateZ(-300px) scale(2.1);
 }
 
-.parallax-group .mid-layer
-{
-    /* 1 = ((Z transform value * -1) /perspective */
+.mid-layer{
+    /* 1 - ((Z transform value * -1) /perspective */
     transform: translateZ(0);
 }
 
-.parallax-group .top-layer
-{
-    /* 1 = ((Z transform value * -1) /perspective */
-    transform: translateZ(200px) scale(0.3);
+.top-layer{
+    /* 1 - ((Z transform value * -1) /perspective */
+    transform: translateZ(100px) scale(0.67);
 }
 
-#intro 
-{
+#intro {
  z-index: 0;
+}
+
+.intro-screen img{
+    border-radius: 0.5rem;
+    height: 50vh;
+    margin-left: 3rem;
+    transform: translate(0rem, 0%);
+    transition: 800ms;
+}
+
+.intro-screen img:hover{
+    transform: translate(0rem, -5%);
 }
 
 #group-1 
@@ -98,31 +101,17 @@
     justify-content: flex-start;
 }
 
-#group-1 > .top-layer
+#group-2 > .top-layer
 {
-    justify-content: flex-start;
-    margin-left: 1rem;
-    font-size: 2rem;
-    color: #131219;
+    display: flex;
+    justify-content: end;
 }
 
 #group-2 > .mid-layer 
 {
-   background-color: #131219;
-}
-
-.intro-screen img 
-{
-    border-radius: 0.5rem;
-    height: 50vh;
-    margin-left: 3rem;
-    transform: translate(0rem, 0%);
-    transition: 800ms;
-}
-
-.intro-screen img:hover 
-{
-    transform: translate(0rem, -5%);
+    display: flex;
+    justify-content: start;
+    background-color: #131219;
 }
 
 label 
@@ -159,7 +148,7 @@ label h1
 
 .social-icon:hover
 {
-    transform: translate(0rem, -200%);
+    transform: translate(0rem, -20%);
     opacity: 0.5;
 }
 
@@ -180,28 +169,34 @@ label h1
 
 .language 
 {
-    margin-top: 7rem;
+    margin-top: 3rem;
     display: flex;
     justify-content: space-around;
     align-items: center;
 }
+
 .language img
 {
     width: 15vw;
 }
 
-#parallax-background-pattern h1 {
-    text-align: center;
-    margin-top: 1rem;
-}
 
 .text-card
 {
-    background-color: #131219;
     border-radius: 10px;
-    height: 20vh;
-    width: 30vw;
     font-size: large;
-    text-align: justify;
-    padding: 5rem;
+    text-align: start;
+    padding: 3rem;
+}
+
+#group-1 .text-card
+{
+    background-color: #131219;
+    width: 30vw;
+}
+#group-2 .text-card
+{
+    margin-top: 3rem;
+    width: 100%;
+    background-color: #671da0;
 }
