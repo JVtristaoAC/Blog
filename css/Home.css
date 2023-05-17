@@ -38,18 +38,16 @@
 }
 
 .outro-screen{
+    padding: 5rem;
     scroll-snap-align: start;
     height: 20vh;
     background-color: #671da0;
-    display: flex;
-    justify-content: center;
-    align-items:center;
+    display: block;
 }
 
 .parallax-group{
     scroll-snap-align: start;
     position: relative;
-    height: 90vh;
     transform-style: preserve-3d;
 }
 
@@ -90,49 +88,40 @@
     transform: translate(0rem, -5%);
 }
 
-#group-1 
-{
+#group-1 {
+    height: 90vh;
     z-index: -1;
 }
 
-#group-1 > .base-layer
-{
+#group-1 > .base-layer{
     background-color: #671da0;
     justify-content: flex-start;
 }
 
-#group-2 > .top-layer
-{
+#group-2 {
+    height: 90vh;
+}
+
+#group-2 > .top-layer{
     display: flex;
     justify-content: end;
 }
 
-#group-2 > .mid-layer 
-{
+#group-2 > .mid-layer {
     display: flex;
     justify-content: start;
     background-color: #131219;
 }
 
-label 
-{
-    width: 40vw;
-    height: 50vh;
-    text-align: start;
-}
-
-label h1
-{
+label h1{
     color: #671da0;
 }
 
-.informations
-{
+.informations{
     margin-left: 3rem;
 }
 
-.social-icons
-{
+.social-icons{
     display: flex;
 }
 
@@ -146,14 +135,12 @@ label h1
     transition: 500ms;
 }
 
-.social-icon:hover
-{
+.social-icon:hover{
     transform: translate(0rem, -20%);
     opacity: 0.5;
 }
 
-.work-item
-{
+.work-item{
     background-color: #131219;
     height: 50vh;
     width: 20vw;
@@ -161,42 +148,80 @@ label h1
     border-radius: 0.5rem;
 }
 
-.work-item img
-{
+.work-item img{
     border-radius: 0.5rem;
     width: 20vw;
 }
 
-.language 
-{
+.language {
     margin-top: 3rem;
     display: flex;
     justify-content: space-around;
     align-items: center;
 }
 
-.language img
-{
+.language img{
     width: 15vw;
 }
 
-
-.text-card
-{
+.text-card{
     border-radius: 10px;
-    font-size: large;
     text-align: start;
     padding: 3rem;
 }
 
-#group-1 .text-card
-{
+#group-1 .text-card{
+    font-size: large;
     background-color: #131219;
     width: 30vw;
 }
-#group-2 .text-card
-{
+
+#group-2 .text-card{
+    font-size: x-large;
     margin-top: 3rem;
     width: 100%;
     background-color: #671da0;
+}
+
+#group-2 .text-card a{
+    color: white;
+}
+
+#outro h1 {
+     font-size: 3rem;
+}
+
+.contacts {
+    display: flex;
+}
+
+.contact {
+    padding: 1rem;
+    background-color: #131219;
+    margin: 1rem;
+    border-radius: 50px;
+    width: 50%;
+}
+
+.contacts img {
+    border-radius: 0.5rem;
+    height: 3rem;
+    transform: translate(0rem, 0%);
+    transition: 800ms;
+}
+
+.contacts img:hover {
+    transform: translate(0rem, -5%);
+}
+
+#outro a {
+    color: white;
+    text-decoration: none;
+}
+
+.text-contact {
+   margin-top: 3rem;
+   margin-left: 1rem;
+   font-size: larger;
+   vertical-align: 1rem;
 }
