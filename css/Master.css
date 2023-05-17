@@ -22,7 +22,6 @@ body {
     animation: transitionIn 2s;
     font-family: 'Questrial', sans-serif;
     color: #fff;
-    overflow: hidden;
     width: 100vw;
 }
 

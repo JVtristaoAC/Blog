@@ -1,0 +1,78 @@
+body{
+    overflow-x: hidden;
+}
+.social-icons{
+    display: flex;
+}
+.social-icons .social-icon{
+    background-color: #671da0;
+    border-radius: 0.5rem;
+    height: 5vh;
+    padding: 0.5vh;
+    margin: 2rem 0.5rem;
+    transform: translate(0rem, 0%);
+    transition: 500ms;
+}
+
+.social-icon:hover{
+    transform: translate(0rem, -20%);
+    opacity: 0.5;
+}
+
+#outro h1 {
+    align-self: flex-end;
+    font-size: 3rem;
+}
+
+.contacts {
+   display: flex;
+}
+
+.outro-screen{
+    padding: 5rem;
+    scroll-snap-align: start;
+    height: 20vh;
+    background-color: #671da0;
+    display: block;
+}
+
+.contact {
+   padding: 1.5rem;
+   background-color: #131219;
+   margin: 1rem;
+   border-radius: 50px;
+   width: 50%;
+}
+
+.contacts img {
+   border-radius: 0.5rem;
+   height: 3rem;
+   transform: translate(0rem, 0%);
+   transition: 800ms;
+}
+
+.contacts img:hover {
+   transform: translate(0rem, -5%);
+}
+
+#outro a {
+   color: white;
+   text-decoration: none;
+}
+
+.text-contact {
+  transition: 400ms;
+  cursor: pointer;
+  margin-top: 3rem;
+  margin-left: 1rem;
+  font-size: larger;
+  vertical-align: 1rem;
+}
+
+.text-contact:hover {
+   opacity: 0.5;
+}
+
+.project img {
+    width: 100vw;
+}

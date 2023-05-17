@@ -1,4 +1,3 @@
-
 #parallax-background-pattern {
     height: 90vh;
     width: 100vw;
@@ -220,6 +219,7 @@ label h1{
 }
 
 .text-contact {
+   transition: 400ms;
    cursor: pointer;
    margin-top: 3rem;
    margin-left: 1rem;
@@ -228,5 +228,5 @@ label h1{
 }
 
 .text-contact:hover {
-    opacity: 0.8;
+    opacity: 0.5;
 }
