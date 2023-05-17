@@ -19,7 +19,7 @@
 }
 
 .parallax-wrapper {
-    height: 90vh;
+    height: 100vh;
     overflow-x: hidden;
     overflow-y: scroll;
     scroll-snap-type: y proximity;
@@ -30,7 +30,7 @@
 .intro-screen {
     background-color: #131219;
     scroll-snap-align: start;
-    height: 90vh;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items:center;
@@ -88,7 +88,7 @@
 }
 
 #group-1 {
-    height: 90vh;
+    height: 100vh;
     z-index: -1;
 }
 
@@ -98,7 +98,7 @@
 }
 
 #group-2 {
-    height: 90vh;
+    height: 100vh;
 }
 
 #group-2 > .top-layer{
