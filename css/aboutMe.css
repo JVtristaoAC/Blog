@@ -2,8 +2,41 @@
     overflow: scroll;
     height: 100vh;
 }
+
+.informations h1{
+    color: #671da0;
+}
+.text-card{
+    border-radius: 10px;
+    text-align: start;
+    padding: 3rem;
+    font-size: x-large;
+    margin: 3rem;
+    width: 85%;
+    background-color: #671da0;
+}
+
+.informations{
+    padding: 3rem;
+    display: block;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.wrapper img{
+    border-radius: 0.5rem;
+    height: 50vh;
+    transform: translate(0rem, 0%);
+    transition: 800ms;
+}
+
+.wrapper img:hover{
+    transform: translate(0rem, -5%);
+}
 .social-icons{
     display: flex;
+    justify-content: center;
 }
 
 .social-icons .social-icon{
@@ -11,7 +44,7 @@
     border-radius: 0.5rem;
     height: 5vh;
     padding: 0.5vh;
-    margin: 2rem 0.5rem;
+    margin: 1rem 0.5rem;
     transform: translate(0rem, 0%);
     transition: 500ms;
 }
@@ -75,30 +108,12 @@
    opacity: 0.7;
 }
 
-.project {
-   height: 75vh;
-   padding: 3rem;
-   display: flex;
+.main {
+    background-color: #131219;
+    scroll-snap-align: start;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items:center;
 }
 
-.projects .project a {
-   margin-top: 60vh; 
-   margin-left: 30vh;
-   height: 1.5rem;
-   color: white;
-   font-size: x-large;
-   text-decoration: none;
-   background-color: #671da0;
-   padding: 1rem 4rem;
-   border-radius: 10px;
-   transition: 500ms;
-}
-
-.project a:hover {
-    opacity: 0.5;
- }
-
-.weatherApp{
-    background-size: cover;
-    background-image: url('../img/projects/WeatherApp.png');
-}
