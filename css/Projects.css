@@ -1,7 +1,10 @@
 .wrapper{
-    overflow: scroll;
+    overflow-y: scroll;
+    scroll-snap-type: y proximity;
     height: 100vh;
+    transition: 800ms;
 }
+
 .social-icons{
     display: flex;
 }
@@ -32,7 +35,6 @@
 
 .outro-screen{
     padding: 5rem;
-    scroll-snap-align: start;
     height: 25vh;
     background-color: #671da0;
     display: block;
@@ -61,7 +63,6 @@
    color: white;
    text-decoration: none;
 }
-
 .text-contact {
   transition: 400ms;
   cursor: pointer;
@@ -76,14 +77,17 @@
 }
 
 .project {
+   animation: transitionIn 1s;
+   scroll-snap-align: start;
+   transition: 800ms;
    height: 75vh;
    padding: 3rem;
    display: flex;
 }
 
 .projects .project a {
-   margin-top: 60vh; 
-   margin-left: 30vh;
+   margin-top: 45vh; 
+   margin-left: 10vh;
    height: 1.5rem;
    color: white;
    font-size: x-large;

@@ -104,24 +104,27 @@
     opacity: 0.7;
  }
 
- .about-fatec{
+.about-fatec{
    scroll-snap-align: start;
    height: 75vh;
    padding: 3rem;
    display: block;
  }
 
- .text-fatec{
-    font-size: larger;
+.text-fatec{
+   font-size: larger;
  }
 
- .text-fatec a{
-    text-decoration: none;
+.text-fatec h1{
+   color: #671da0;
+}
 
+.text-fatec a{
+   text-decoration: none;
+   color: #671da0;
  }
 
- iframe 
- {
+iframe{
     text-align: center;
     height: 50vh;
     width: 95%;
